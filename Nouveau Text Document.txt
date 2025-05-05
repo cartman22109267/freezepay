@@ -1,0 +1,55 @@
+npm install -g react-native-cli
+PostgreSQL
+
+Installe via le site officiel ou Homebrew (brew install postgresql)
+
+Crée la BDD :createdb freezepay_db
+
+
+# 1) Init
+npx react-native init FreezePay
+cd FreezePay
+
+# 2) Installer les dépendances
+yarn add \
+  @react-navigation/native \
+  @react-navigation/native-stack \
+  react-native-screens \
+  react-native-safe-area-context \
+  react-native-vector-icons \
+  axios \
+  @react-native-async-storage/async-storage \
+  react-native-qrcode-scanner \
+  react-native-permissions \
+  react-native-nfc-manager \
+  react-native-bluetooth-serial-next
+
+# 3) iOS only
+cd ios && pod install && cd ..
+
+
+{
+  "name": "FreezePay",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios":     "react-native run-ios",
+    "start":   "react-native start"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-navigation/native": "^6.0.0",
+    "@react-navigation/native-stack": "^6.0.0",
+    "axios": "^1.9.0",
+    "react": "18.2.0",
+    "react-native": "0.71.0",
+    "react-native-bluetooth-serial-next": "^4.0.3",
+    "react-native-nfc-manager": "^3.16.1",
+    "react-native-permissions": "^3.3.1",
+    "react-native-qrcode-scanner": "^1.5.4",
+    "react-native-safe-area-context": "^4.5.0",
+    "react-native-screens": "^3.20.0",
+    "react-native-vector-icons": "^10.2.0"
+  }
+}
